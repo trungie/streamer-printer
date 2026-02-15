@@ -125,6 +125,10 @@ function twitchEventsAddon() {
 		if ("targetUserProfileImageUrl" in streamerBotArgs) {
 			templateVars['userProfileImage'] = streamerBotArgs['targetUserProfileImageUrl'];
 		}
+
+		if (streamerBotArgs['TestProfile']) {
+			templateVars['userProfileImage'] = "https://i.pravatar.cc/256";
+		}
 		
 		if ((streamerBotArgs['source'] == "TwitchSub") || (templateVars['source'] == "TwitchReSub"))  {
 			if (streamerBotArgs['cumulative']) {
