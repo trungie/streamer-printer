@@ -113,9 +113,9 @@ registerSpecialEventTheme({
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
 		var bottomBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 
-		var quote = '<div class="valentines-quote">{{ valentinesQuote }}</div>';
+		var quote = '<div class="valentines-quote">Random Valentine\'s Day quote for you: {{ valentinesQuote }}</div>';
 
-		return topBanner + header + quote + html + bottomBanner;
+		return topBanner + header + html + quote + bottomBanner;
 	},
 
 	addData: function (data, vars) {
