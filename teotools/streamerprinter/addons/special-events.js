@@ -86,18 +86,17 @@ registerSpecialEventTheme({
 	dateRange: { monthStart: 2, dayStart: 14, monthEnd: 2, dayEnd: 14 },
 
 	css: function () {
-		var heartSvg = 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpath d=%27M50,90 C50,90,5,60,5,30 C5,10,18,0,30,0 C38,0,45,5,50,15 C55,5,62,0,70,0 C82,0,95,10,95,30 C95,60,50,90,50,90 Z%27 fill=%27black%27/%3E%3C/svg%3E';
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
-			'.profileImage img {',
-			'    -webkit-mask-image: url("' + heartSvg + '");',
-			'    -webkit-mask-size: contain;',
-			'    -webkit-mask-repeat: no-repeat;',
-			'    -webkit-mask-position: center;',
-			'    mask-image: url("' + heartSvg + '");',
-			'    mask-size: contain;',
-			'    mask-repeat: no-repeat;',
-			'    mask-position: center;',
+			'.profileImage {',
+			'    position: relative;',
+			'}',
+			'.heart-overlay {',
+			'    position: absolute;',
+			'    top: 0;',
+			'    left: 0;',
+			'    width: 100%;',
+			'    height: auto;',
 			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
@@ -115,6 +114,13 @@ registerSpecialEventTheme({
 
 	decorateHtml: function (html) {
 		var heartRow = '\u2665 \u2665 \u2665 \u2665 \u2665';
+
+		// Add heart frame overlay after each profile image
+		var overlay = '<img class="heart-overlay" src="../addons/heart-frame.svg" />';
+		html = html.replace(
+			/\{\{\s*userProfileImage\s*\|\s*image\s*\}\}/g,
+			'{{ userProfileImage|image }}' + overlay
+		);
 
 		var topBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
