@@ -88,6 +88,10 @@ registerSpecialEventTheme({
 	css: function () {
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
+			'.profileImage img {',
+			'    clip-path: url(#heart-clip);',
+			'    -webkit-clip-path: url(#heart-clip);',
+			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
 			'    letter-spacing: 0.3em;',
@@ -104,21 +108,6 @@ registerSpecialEventTheme({
 
 	decorateHtml: function (html) {
 		var heartRow = '\u2665 \u2665 \u2665 \u2665 \u2665';
-
-		// Replace profile <img> with heart-clipped SVG version
-		// This runs before Swig renders, so we swap the Swig expression directly
-		var heartSvg = [
-			'<svg viewBox="0 0 256 256" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">',
-			'  <defs>',
-			'    <clipPath id="heart-clip">',
-			'      <path d="M128,224 C128,224,16,168,16,80 C16,32,48,4,80,4 C102,4,120,16,128,38 C136,16,154,4,176,4 C208,4,240,32,240,80 C240,168,128,224,128,224 Z"/>',
-			'    </clipPath>',
-			'  </defs>',
-			'  <image xlink:href="{{ userProfileImage }}" href="{{ userProfileImage }}" width="256" height="256" clip-path="url(#heart-clip)"/>',
-			'</svg>'
-		].join('\n');
-
-		html = html.replace(/\{\{\s*userProfileImage\s*\|\s*image\s*\}\}/g, heartSvg);
 
 		var topBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
