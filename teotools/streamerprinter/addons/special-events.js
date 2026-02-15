@@ -88,16 +88,6 @@ registerSpecialEventTheme({
 	css: function () {
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
-			'.profileImage {',
-			'    position: relative;',
-			'}',
-			'.heart-overlay {',
-			'    position: absolute;',
-			'    top: 0;',
-			'    left: 0;',
-			'    width: 100%;',
-			'    height: auto;',
-			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
 			'    letter-spacing: 0.3em;',
@@ -114,13 +104,6 @@ registerSpecialEventTheme({
 
 	decorateHtml: function (html) {
 		var heartRow = '\u2665 \u2665 \u2665 \u2665 \u2665';
-
-		// Add heart frame overlay after each profile image
-		var overlay = '<img class="heart-overlay" src="../addons/heart-frame.svg" />';
-		html = html.replace(
-			/\{\{\s*userProfileImage\s*\|\s*image\s*\}\}/g,
-			'{{ userProfileImage|image }}' + overlay
-		);
 
 		var topBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
