@@ -14,16 +14,21 @@ fi
 echo "=== Streamer Printer: Dev Environment Setup ==="
 echo ""
 
+# --- make (runs Makefile targets for convenient rendering commands) ---
+# The Makefile provides shorthand targets like `make sub`, `make raid`, etc.
+echo "[1/4] Installing make..."
+apt-get install -y make
+
 # --- Wine (runs the bundled Windows wkhtmltopdf.exe / wkhtmltoimage.exe) ---
 # The production pipeline uses wkhtmltopdf.exe on Windows to convert HTML to PDF.
 # Wine lets us run the exact same .exe on Linux for rendering parity.
-echo "[1/3] Installing Wine..."
+echo "[2/4] Installing Wine..."
 apt-get install -y wine
 
 # --- Wine 32-bit support (wkhtmltopdf.exe is a 32-bit Windows binary) ---
 # Without this, Wine runs in 64-bit-only mode which has limited compatibility
 # and prints "wine32 is missing" warnings on every invocation.
-echo "[2/3] Installing Wine 32-bit support..."
+echo "[3/4] Installing Wine 32-bit support..."
 dpkg --add-architecture i386
 apt-get update
 apt-get install -y wine32:i386
@@ -32,7 +37,7 @@ apt-get install -y wine32:i386
 # wkhtmltopdf uses Qt/WebKit internally which requires a display server.
 # On headless systems (SSH, CI, no desktop), Xvfb provides a virtual X display
 # so wkhtmltopdf can render without a physical monitor.
-echo "[3/3] Installing Xvfb..."
+echo "[4/4] Installing Xvfb..."
 apt-get install -y xvfb
 
 echo ""
@@ -42,4 +47,6 @@ echo "You may need to recreate your Wine prefix:"
 echo "  rm -rf ~/.wine && WINEARCH=win64 wineboot"
 echo ""
 echo "Test it:"
-echo "  ./dev/test-render.sh dev/samples/sub.json"
+echo "  make sub"
+echo "  make streamelements-tip"
+echo "  make all"
