@@ -1,0 +1,9 @@
+{
+  "__source": "RewardRedemption",
+  "source": "RewardRedemption",
+  "user": "TextPrinter",
+  "rewardName": "Print Message",
+  "rawInput": "Hello from the printer!",
+  "addon": "print_text",
+  "text": "Hello from the printer!"
+}
