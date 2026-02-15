@@ -5,5 +5,7 @@
   "gifts": 5,
   "totalGifts": 100,
   "tier": "Tier 1",
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

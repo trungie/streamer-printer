@@ -5,5 +5,7 @@
   "tipAmount": "5.00",
   "tipMessage": "Keep up the great content!",
   "tipCurrency": "USD",
-  "tipAvatar": ""
+  "tipAvatar": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

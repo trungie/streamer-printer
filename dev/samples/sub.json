@@ -5,5 +5,7 @@
   "cumulative": 1,
   "tier": "Tier 1",
   "rawInput": "Love the streams, keep it up!",
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

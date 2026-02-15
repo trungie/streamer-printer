@@ -1,5 +1,7 @@
 {
   "__source": "TwitchFollow",
   "source": "TwitchFollow",
-  "user": "NewFollower123"
+  "user": "NewFollower123",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

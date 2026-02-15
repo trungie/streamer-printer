@@ -3,5 +3,7 @@
   "source": "TwitchRaid",
   "user": "FriendlyStreamer",
   "viewers": 150,
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

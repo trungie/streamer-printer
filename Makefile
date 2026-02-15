@@ -1,8 +1,9 @@
 # Local dev rendering — runs Wine + wkhtmltopdf.exe via dev/test-render.sh
-# Usage: make <target>        (PDF)
-#        make <target> IMG=1   (PNG image instead)
-#        make <target> SIZE=A5 (custom paper size)
-#        make <target> KEEP=1  (keep intermediate HTML for debugging)
+# Usage: make <target>              (continuous PDF, default)
+#        make <target> PAGINATED=1  (fixed page size, matches production)
+#        make <target> IMG=1        (PNG image instead)
+#        make <target> SIZE=A5      (custom paper size)
+#        make <target> KEEP=1       (keep intermediate HTML for debugging)
 
 RENDER := ./dev/test-render.sh
 FLAGS  :=
@@ -15,6 +16,9 @@ ifdef IMG
 endif
 ifdef KEEP
   FLAGS += -k
+endif
+ifdef PAGINATED
+  FLAGS += -p
 endif
 
 # --- Individual event types ---

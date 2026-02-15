@@ -4,5 +4,7 @@
   "user": "CheerMaster",
   "bits": 500,
   "messageStripped": "Great stream today!",
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

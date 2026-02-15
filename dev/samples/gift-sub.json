@@ -7,5 +7,7 @@
   "totalSubsGifted": 50,
   "tier": "Tier 1",
   "rawInput": "",
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

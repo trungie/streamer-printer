@@ -4,5 +4,7 @@
   "donationFrom": "KindDonor",
   "donationAmount": "10.00",
   "donationMessage": "Here's a tip for you!",
-  "donationCurrency": "GBP"
+  "donationCurrency": "GBP",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

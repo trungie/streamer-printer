@@ -13,6 +13,7 @@ Options:
   -i, --image           Output PNG via wkhtmltoimage.exe instead of PDF
   -k, --keep-html       Keep the assembled HTML temp file for debugging
   -d, --delay MS        JavaScript delay in ms (default: 800)
+  -p, --paginated       Use fixed page size (production mode) instead of continuous
   -h, --help            Show this help
 EOF
 }
@@ -22,6 +23,7 @@ PAPER_SIZE="A6"
 OUTPUT_FILE=""
 IMAGE_MODE=false
 KEEP_HTML=false
+PAGINATED=false
 JS_DELAY=800
 JSON_FILE=""
 
@@ -32,6 +34,7 @@ while [[ $# -gt 0 ]]; do
         -o|--output)  OUTPUT_FILE="$2"; shift 2 ;;
         -i|--image)   IMAGE_MODE=true; shift ;;
         -k|--keep-html) KEEP_HTML=true; shift ;;
+        -p|--paginated) PAGINATED=true; shift ;;
         -d|--delay)   JS_DELAY="$2"; shift 2 ;;
         -h|--help)    usage; exit 0 ;;
         -*)           echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
@@ -95,6 +98,17 @@ to_winpath() {
     echo "Z:$(echo "$1" | tr '/' '\\')"
 }
 
+# Map paper size name to width in mm (for continuous/receipt mode)
+paper_width_mm() {
+    case "$1" in
+        A5)  echo 148 ;; A6)  echo 105 ;; A7)  echo 74 ;;
+        A8)  echo 52 ;;  A9)  echo 37 ;;  A10) echo 26 ;;
+        B5)  echo 176 ;; B6)  echo 125 ;; B7)  echo 88 ;;
+        B8)  echo 62 ;;  B9)  echo 44 ;;  B10) echo 31 ;;
+        *)   echo 105 ;; # default to A6 width
+    esac
+}
+
 # --- Read JSON and extract source for filename ---
 
 JSON_DATA=$(<"$JSON_FILE")
@@ -114,6 +128,10 @@ mkdir -p "$SP_DIR/temp"
 
 {
     cat "$SP_DIR/templates/head.html"
+    # In continuous mode, override footer spacing and page breaks
+    if [[ "$PAGINATED" != true ]]; then
+        printf '%s' '<style>.footer_spacing{height:0!important}footer{page-break-after:avoid!important;margin:0!important}</style>'
+    fi
     printf '%s' "</div><script>${WRAPPED_JSON}</script>"
     cat "$SP_DIR/addons/addons.html"
     printf '\n'
@@ -158,9 +176,13 @@ if [[ ! -f "$BINARY" ]]; then
     exit 1
 fi
 
-echo "Rendering ${SOURCE} (${PAPER_SIZE}, ${EXT})..."
+MODE="continuous"
+if [[ "$PAGINATED" = true ]]; then
+    MODE="paginated"
+fi
+echo "Rendering ${SOURCE} (${PAPER_SIZE}, ${MODE}, ${EXT})..."
 
-# --- Build Wine command with exact production flags (StreamerPrinter.cs lines 136-138) ---
+# --- Build Wine command (base flags from StreamerPrinter.cs lines 136-138) ---
 
 WINE_ARGS=("$BINARY")
 if [[ "$IMAGE_MODE" = true ]]; then
@@ -173,7 +195,8 @@ if [[ "$IMAGE_MODE" = true ]]; then
         --javascript-delay "$JS_DELAY"
         "$HTML_WIN" "$OUTPUT_WIN"
     )
-else
+elif [[ "$PAGINATED" = true ]]; then
+    # Exact production flags — fixed page size, multi-page output
     WINE_ARGS+=(
         -s "$PAPER_SIZE"
         --load-error-handling ignore
@@ -185,6 +208,24 @@ else
         --header-spacing -200
         --margin-top 0
         --footer-spacing 50
+        "$HTML_WIN" "$OUTPUT_WIN"
+    )
+else
+    # Continuous receipt mode — same width, single tall page (no page breaks)
+    PAGE_WIDTH=$(paper_width_mm "$PAPER_SIZE")
+    WINE_ARGS+=(
+        --page-width "$PAGE_WIDTH"
+        --page-height 3276
+        --load-error-handling ignore
+        --no-background
+        --debug-javascript
+        --enable-javascript
+        --enable-local-file-access
+        --javascript-delay "$JS_DELAY"
+        --margin-top 0
+        --margin-bottom 0
+        --margin-left 0
+        --margin-right 0
         "$HTML_WIN" "$OUTPUT_WIN"
     )
 fi

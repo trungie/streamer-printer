@@ -5,5 +5,7 @@
   "rewardName": "Print Message",
   "rawInput": "Hello from the printer!",
   "addon": "print_text",
-  "text": "Hello from the printer!"
+  "text": "Hello from the printer!",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

@@ -5,5 +5,7 @@
   "cumulative": 24,
   "tier": "Tier 1",
   "rawInput": "Two years and counting! Best community on Twitch.",
-  "targetUserProfileImageUrl": ""
+  "targetUserProfileImageUrl": "",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }

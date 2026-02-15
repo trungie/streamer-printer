@@ -4,5 +4,7 @@
   "user": "FortuneSeeker",
   "rewardName": "Fortune Cookie",
   "rawInput": "",
-  "addon": "fortune"
+  "addon": "fortune",
+  "TestProfile": true,
+  "specialEvent": "valentines"
 }
