@@ -88,10 +88,6 @@ registerSpecialEventTheme({
 	css: function () {
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
-			'.profileImage img {',
-			'    clip-path: url(#heart-clip);',
-			'    -webkit-clip-path: url(#heart-clip);',
-			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
 			'    letter-spacing: 0.3em;',
@@ -109,22 +105,26 @@ registerSpecialEventTheme({
 	decorateHtml: function (html) {
 		var heartRow = '\u2665 \u2665 \u2665 \u2665 \u2665';
 
-		// Hidden SVG with heart clipPath for profile images
-		var svgClipPath = [
-			'<svg width="0" height="0" style="position:absolute">',
+		// Replace profile <img> with heart-clipped SVG version
+		// This runs before Swig renders, so we swap the Swig expression directly
+		var heartSvg = [
+			'<svg viewBox="0 0 256 256" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">',
 			'  <defs>',
-			'    <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">',
-			'      <path d="M0.5,0.92 C0.28,0.75,0,0.55,0,0.32 C0,0.12,0.15,0,0.3,0 C0.38,0,0.45,0.04,0.5,0.12 C0.55,0.04,0.62,0,0.7,0 C0.85,0,1,0.12,1,0.32 C1,0.55,0.72,0.75,0.5,0.92 Z"/>',
+			'    <clipPath id="heart-clip">',
+			'      <path d="M128,224 C128,224,16,168,16,80 C16,32,48,4,80,4 C102,4,120,16,128,38 C136,16,154,4,176,4 C208,4,240,32,240,80 C240,168,128,224,128,224 Z"/>',
 			'    </clipPath>',
 			'  </defs>',
+			'  <image xlink:href="{{ userProfileImage }}" href="{{ userProfileImage }}" width="256" height="256" clip-path="url(#heart-clip)"/>',
 			'</svg>'
 		].join('\n');
+
+		html = html.replace(/\{\{\s*userProfileImage\s*\|\s*image\s*\}\}/g, heartSvg);
 
 		var topBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
 		var bottomBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 
-		return svgClipPath + topBanner + header + html + bottomBanner;
+		return topBanner + header + html + bottomBanner;
 	},
 
 	addData: function (data, vars) {
