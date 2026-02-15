@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "name": "",
+  "actions": [
+    {
+      "id": "04a69d7e-fdf8-4c5b-8eac-09742693208e",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Streamelements Tip Printer",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "__source",
+          "value": "StreamElementsTip",
+          "id": "bb553ab6-81ea-43ce-ba78-9bf52d523d92",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "sourceType": 2,
+          "variable": "tipUsername",
+          "id": "70ac4252-0323-4126-a0b6-4dfe178a8c24",
+          "weight": 0.0,
+          "type": 50,
+          "group": null,
+          "index": 1
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "50cad550-383e-4128-b234-2dce064d3a49",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "003aa5e3-3ec6-4c9a-afe2-3282db7f8cfb",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Print Twitch Events [Default]",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "value": "Steps to install: Copy Code, Find references, add manually as in mine",
+          "id": "0cee7907-eae7-4fa3-9f6c-d2e4ea66222f",
+          "weight": 0.0,
+          "type": 1009,
+          "group": "",
+          "index": 0
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "e57d729a-844d-48c1-b2c1-cad3f1e1ceac",
+          "weight": 0.0,
+          "type": 4,
+          "group": "",
+          "index": 2
+        },
+        {
+          "variableName": "anonymous",
+          "operation": 6,
+          "value": "",
+          "actionId": "142ff0ed-81eb-4b13-99f2-59373c0986b0",
+          "runImmediately": true,
+          "afterAction": 0,
+          "id": "14fe92f9-61af-4a8a-a9f1-416f84f9b2e4",
+          "weight": 0.0,
+          "type": 120,
+          "group": "",
+          "index": 1
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Print Function [ Call From Action ]",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "name": "",
+          "description": "",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.Runtime.Serialization.Json.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.dll"
+          ],
+          "byteCode": "dXNpbmcgU3lzdGVtOw0KdXNpbmcgTmV3dG9uc29mdC5Kc29uOw0KdXNpbmcgU3lzdGVtLklPOw0KdXNpbmcgU3lzdGVtLkRpYWdub3N0aWNzOw0KdXNpbmcgU3lzdGVtLlJlZmxlY3Rpb247DQp1c2luZyBTeXN0ZW0uUnVudGltZS5JbnRlcm9wU2VydmljZXM7DQp1c2luZyBTeXN0ZW0uVGV4dDsNCnVzaW5nIFN5c3RlbS5UaHJlYWRpbmc7DQoNCnB1YmxpYyBjbGFzcyBDUEhJbmxpbmUNCnsNCglzdGF0aWMgc3RyaW5nIFByaW50ZXJOYW1lOw0KCXN0YXRpYyBzdHJpbmcgdGVvdG9vbHNfcGF0aDsNCglzdGF0aWMgYm9vbCBEZWJ1ZzsNCg0KICAgIGNsYXNzIEluaUZpbGUgICAvLyByZXZpc2lvbiAxMQ0KICAgIHsNCiAgICAgICAgc3RyaW5nIFBhdGg7DQogICAgICAgIHN0cmluZyBFWEUgPSBBc3NlbWJseS5HZXRFeGVjdXRpbmdBc3NlbWJseSgpLkdldE5hbWUoKS5OYW1lOw0KDQogICAgICAgIFtEbGxJbXBvcnQoImtlcm5lbDMyIiwgQ2hhclNldCA9IENoYXJTZXQuVW5pY29kZSldDQogICAgICAgIHN0YXRpYyBleHRlcm4gbG9uZyBXcml0ZVByaXZhdGVQcm9maWxlU3RyaW5nKHN0cmluZyBTZWN0aW9uLCBzdHJpbmcgS2V5LCBzdHJpbmcgVmFsdWUsIHN0cmluZyBGaWxlUGF0aCk7DQoNCiAgICAgICAgW0RsbEltcG9ydCgia2VybmVsMzIiLCBDaGFyU2V0ID0gQ2hhclNldC5Vbmljb2RlKV0NCiAgICAgICAgc3RhdGljIGV4dGVybiBpbnQgR2V0UHJpdmF0ZVByb2ZpbGVTdHJpbmcoc3RyaW5nIFNlY3Rpb24sIHN0cmluZyBLZXksIHN0cmluZyBEZWZhdWx0LCBTdHJpbmdCdWlsZGVyIFJldFZhbCwgaW50IFNpemUsIHN0cmluZyBGaWxlUGF0aCk7DQoNCiAgICAgICAgcHVibGljIEluaUZpbGUoc3RyaW5nIEluaVBhdGggPSBudWxsKQ0KICAgICAgICB7DQogICAgICAgICAgICBQYXRoID0gbmV3IEZpbGVJbmZvKEluaVBhdGggPz8gRVhFICsgIi5pbmkiKS5GdWxsTmFtZTsNCiAgICAgICAgfQ0KDQogICAgICAgIHB1YmxpYyBzdHJpbmcgUmVhZChzdHJpbmcgS2V5LCBzdHJpbmcgU2VjdGlvbiA9IG51bGwpDQogICAgICAgIHsNCiAgICAgICAgICAgIHZhciBSZXRWYWwgPSBuZXcgU3RyaW5nQnVpbGRlcigyNTUpOw0KICAgICAgICAgICAgR2V0UHJpdmF0ZVByb2ZpbGVTdHJpbmcoU2VjdGlvbiA/PyBFWEUsIEtleSwgIiIsIFJldFZhbCwgMjU1LCBQYXRoKTsNCiAgICAgICAgICAgIHJldHVybiBSZXRWYWwuVG9TdHJpbmcoKTsNCiAgICAgICAgfQ0KDQogICAgICAgIHB1YmxpYyB2b2lkIFdyaXRlKHN0cmluZyBLZXksIHN0cmluZyBWYWx1ZSwgc3RyaW5nIFNlY3Rpb24gPSBudWxsKQ0KICAgICAgICB7DQogICAgICAgICAgICBXcml0ZVByaXZhdGVQcm9maWxlU3RyaW5nKFNlY3Rpb24gPz8gRVhFLCBLZXksIFZhbHVlLCBQYXRoKTsNCiAgICAgICAgfQ0KDQogICAgICAgIHB1YmxpYyB2b2lkIERlbGV0ZUtleShzdHJpbmcgS2V5LCBzdHJpbmcgU2VjdGlvbiA9IG51bGwpDQogICAgICAgIHsNCiAgICAgICAgICAgIFdyaXRlKEtleSwgbnVsbCwgU2VjdGlvbiA/PyBFWEUpOw0KICAgICAgICB9DQoNCiAgICAgICAgcHVibGljIHZvaWQgRGVsZXRlU2VjdGlvbihzdHJpbmcgU2VjdGlvbiA9IG51bGwpDQogICAgICAgIHsNCiAgICAgICAgICAgIFdyaXRlKG51bGwsIG51bGwsIFNlY3Rpb24gPz8gRVhFKTsNCiAgICAgICAgfQ0KDQogICAgICAgIHB1YmxpYyBib29sIEtleUV4aXN0cyhzdHJpbmcgS2V5LCBzdHJpbmcgU2VjdGlvbiA9IG51bGwpDQogICAgICAgIHsNCiAgICAgICAgICAgIHJldHVybiBSZWFkKEtleSwgU2VjdGlvbikuTGVuZ3RoID4gMDsNCiAgICAgICAgfQ0KICAgIH0NCglwdWJsaWMgYm9vbCBFeGVjdXRlKCkNCgl7DQoJCXN0cmluZyBwYXRoID0gRGlyZWN0b3J5LkdldEN1cnJlbnREaXJlY3RvcnkoKTsNCgkJc3RyaW5nIHRlb3Rvb2xzX3BhdGggPSBwYXRoICsgIlxcdGVvdG9vbHNcXHN0cmVhbWVycHJpbnRlclxcIjsNCgkJQ1BISW5saW5lLnRlb3Rvb2xzX3BhdGggPSB0ZW90b29sc19wYXRoOw0KCQkvLyBQYXRoLkNvbWJpbmUocm9vdEZvbGRlciwgYXV0aG9yc0ZpbGUpDQoJCUNQSElubGluZS5EZWJ1ZyA9IChib29sKWFyZ3NbIkRlYnVnIl07DQoJCQ0KCQkvLyBTYXZlIHNvdXJjZSBpbiBhcmd1bWVudHMgYXMgYSBzdHJpbmcNCgkJLy9hcmdzWyJzb3VyY2UiXSA9ICIiICsgYXJnc1siX19zb3VyY2UiXTsNCgkJLypQcm9wZXJ0eUluZm8gc291cmNlX3Byb3BlcnR5ID0gYXJncy5HZXRUeXBlKCkuR2V0UHJvcGVydHkoIl9fc291cmNlIik7DQoJCWlmIChzb3VyY2VfcHJvcGVydHkgPT0gbnVsbCkgew0KCQkJYXJnc1sic291cmNlIl0gPSAiU3RyZWFtRWxlbWVudHNUaXAiOw0KCQl9IGVsc2Ugew0KCQkJYXJnc1sic291cmNlIl0gPSAiIiArIGFyZ3NbIl9fc291cmNlIl07DQoJCX0qLw0KCQlDUEguU2V0R2xvYmFsVmFyKCJhcmdzIiwgYXJncyk7DQoJCWlmIChhcmdzLkNvbnRhaW5zS2V5KCJfX3NvdXJjZSIpKSB7DQoJCQlhcmdzWyJzb3VyY2UiXSA9ICIiICsgYXJnc1siX19zb3VyY2UiXTsNCgkJfSBlbHNlIHsNCgkJCUNQSC5Mb2dJbmZvKCJbVEVPVE9PTFM6U1RSRUFNRVJQUklOVEVSXSBObyBzb3VyY2UgcHJvcGVydHksIHdpbGwgbm90IGJlIGFibGUgdG8gcmVuZGVyIGEgdGVtcGxhdGUiKTsNCgkJCXJldHVybiBmYWxzZTsNCn0NCgkJLy8gU2VyaWFsaXplIHRoZSBKU09OIGZvciBlbWJlZGRpbmcgaW4gdGhlIEhUTUwgZmlsZQ0KCQlzdHJpbmcganNvbiA9IEpzb25Db252ZXJ0LlNlcmlhbGl6ZU9iamVjdChhcmdzKTsNCg0KCQlqc29uID0gIndpbmRvdy5kYXRhID0gIiArIGpzb247DQoJCWpzb24gKz0gIlxud2luZG93LnNvdXJjZVByb2dyYW0gPSAnc3RyZWFtZXJib3QnO1xuIjsNCg0KCQkvLyBMb2cgdGhlIEpTT04NCgkJQ1BILkxvZ0luZm8oIltURU9UT09MUzpTVFJFQU1FUlBSSU5URVJdIE9iamVjdCBzZW50IHRvIHByaW50ZXI6ICIgKyBqc29uKTsNCgkJDQoJCS8vIENvbWJpbmUgdGhlIGNvbXBvbmVudCBmaWxlcyBpbnRvIHRoZSBvdXRwdXQgZmlsZQ0KCQlzdHJpbmcgaGVhZCA9IEZpbGUuUmVhZEFsbFRleHQodGVvdG9vbHNfcGF0aCArICJ0ZW1wbGF0ZXNcXGhlYWQuaHRtbCIpOw0KCQlzdHJpbmcgdGVtcGxhdGVzID0gRmlsZS5SZWFkQWxsVGV4dCh0ZW90b29sc19wYXRoICsgInRlbXBsYXRlc1xcdGVtcGxhdGVzLmh0bWwiKTsNCgkJc3RyaW5nIGFkZG9ucyA9IEZpbGUuUmVhZEFsbFRleHQodGVvdG9vbHNfcGF0aCArICJhZGRvbnNcXGFkZG9ucy5odG1sIik7DQoJCXN0cmluZyBmb290ZXIgPSBGaWxlLlJlYWRBbGxUZXh0KHRlb3Rvb2xzX3BhdGggKyAidGVtcGxhdGVzXFxmb290Lmh0bWwiKTsNCgkJc3RyaW5nIG91dHB1dCA9IGhlYWQgKyAiPC9kaXY+PHNjcmlwdD4iICsganNvbiArICI8L3NjcmlwdD4iICsgYWRkb25zICsgIlxuIiArIHRlbXBsYXRlcyArICI8ZGl2PiIgKyBmb290ZXI7DQoJCQ0KCQlzdHJpbmcgb3V0ZmlsZSA9IHRlb3Rvb2xzX3BhdGggKyAidGVtcFxcIiArIGFyZ3NbInNvdXJjZSJdICsgIl9fIiArIERhdGVUaW1lLk5vdy5Ub1N0cmluZygieXl5eU1NZGRISG1tc3NmZmYiKSArICIuaHRtbCI7DQoJCUZpbGUuV3JpdGVBbGxUZXh0KG91dGZpbGUsIG91dHB1dCk7DQoJCUNQSC5Mb2dJbmZvKCJbVEVPVE9PTFM6U1RSRUFNRVJQUklOVEVSXSBDcmVhdGVkIHRlbXBsYXRlIGZpbGUgYXQgIitvdXRmaWxlKTsNCgkJc3RyaW5nIFByaW50ZXJOYW1lID0gKHN0cmluZylhcmdzWyJQcmludGVyTmFtZSJdOw0KCQlzdHJpbmcgUGFwZXJTaXplID0gKHN0cmluZylhcmdzWyJQYXBlclNpemUiXTsNCgkJCQ0KCQkvLyBQcmludCB0aGUgaHRtbCBmaWxlIHRvIHBkZg0KCQlQcmludFRvUGRmKHRlb3Rvb2xzX3BhdGgsIG91dGZpbGUsIFByaW50ZXJOYW1lLCBQYXBlclNpemUpOw0KDQoJCS8vIHlvdXIgbWFpbiBjb2RlIGdvZXMgaGVyZQ0KCQlyZXR1cm4gdHJ1ZTsNCgl9DQoNCgl2b2lkIFByaW50VG9QZGYoc3RyaW5nIHRlb3Rvb2xzX3BhdGgsIHN0cmluZyBvdXRmaWxlLCBzdHJpbmcgUHJpbnRlck5hbWUsIHN0cmluZyBQYXBlclNpemUpDQoJew0KCQkvLyBSZWFkIHRoZSBwcmludGVyIGNvbmZpZw0KCQkvKg0KCQl2YXIgUHJpbnRlckNvbmZpZyA9IG5ldyBJbmlGaWxlKHRlb3Rvb2xzX3BhdGggKyAicHJpbnRlcl9jb25maWcuaW5pIik7DQoJCXN0cmluZyBQcmludGVyTmFtZSA9IFByaW50ZXJDb25maWcuUmVhZCgibmFtZSIsInByaW50ZXIiKTsNCgkJQ1BISW5saW5lLlByaW50ZXJOYW1lID0gUHJpbnRlck5hbWU7DQoNCgkJc3RyaW5nIFBhcGVyU2l6ZSA9IFByaW50ZXJDb25maWcuUmVhZCgicGFwZXJzaXplIiwicHJpbnRlciIpOw0KCQlDUEguTG9nSW5mbyhQcmludGVyTmFtZSk7Ki8NCgkJLyoNCgkJc3RyaW5nIFByaW50ZXJOYW1lID0gYXJnc1siUHJpbnRlck5hbWUiXTsNCgkJc3RyaW5nIFBhcGVyU2l6ZSA9IGFyZ3NbIlBhcGVyU2l6ZSJdOw0KCQkqLw0KDQoJCS8vIENyZWF0ZSBhIHByb2Nlc3MgdG8gcHJpbnQgdGhlIHBkZg0KCQlQcm9jZXNzIHByaW50UGRmID0gbmV3IFByb2Nlc3MoKTsNCg0KCQlwcmludFBkZi5TdGFydEluZm8uRmlsZU5hbWUgPSAodGVvdG9vbHNfcGF0aCArICJiaW5cXHdraHRtbHRvcGRmLmV4ZSIpOw0KCQlpZiAoQ1BISW5saW5lLkRlYnVnKSB7DQoJCQlwcmludFBkZi5TdGFydEluZm8uV2luZG93U3R5bGUgPSBQcm9jZXNzV2luZG93U3R5bGUuTWF4aW1pemVkOw0KCQl9IGVsc2Ugew0KCQkJcHJpbnRQZGYuU3RhcnRJbmZvLldpbmRvd1N0eWxlID0gUHJvY2Vzc1dpbmRvd1N0eWxlLkhpZGRlbjsNCgkJfQ0KCQlzdHJpbmcgcGRmcGF0aCA9ICJcIiIgKyB0ZW90b29sc19wYXRoICsgInRlbXBcXCIgKyBEYXRlVGltZS5Ob3cuVG9TdHJpbmcoInl5eXlNTWRkSEhtbXNzZmZmIikgKyAiLnBkZiIgKyAiXCIiOw0KCQlzdHJpbmcgYXJncyA9ICItcyAiICsgUGFwZXJTaXplOw0KCQlhcmdzICs9ICIgLS1sb2FkLWVycm9yLWhhbmRsaW5nIGlnbm9yZSAtLW5vLWJhY2tncm91bmQgLS1kZWJ1Zy1qYXZhc2NyaXB0IC0tZW5hYmxlLWphdmFzY3JpcHQgLS1lbmFibGUtbG9jYWwtZmlsZS1hY2Nlc3MgLS1qYXZhc2NyaXB0LWRlbGF5IDgwMCAtLWhlYWRlci1zcGFjaW5nIC0yMDAgLS1tYXJnaW4tdG9wIDAgLS1mb290ZXItc3BhY2luZyA1MCI7DQoJCWFyZ3MgKz0gIiBcIiIgKyBvdXRmaWxlICsgIlwiICIgKyBwZGZwYXRoOw0KCQlDUEguTG9nSW5mbyhhcmdzKTsNCgkJQ1BILkxvZ0luZm8oIltURU9UT09MUzpTVFJFQU1FUlBSSU5URVJdIENyZWF0aW5nIFBERiBmaWxlIGF0ICIrcGRmcGF0aCk7DQoNCgkJLy8gUnVuIHRoZSBwcm9jZXNzIHRvIGNvbnZlcnQgaHRtbCB0byBwZGYNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLkFyZ3VtZW50cyA9IGFyZ3M7DQoJCXByaW50UGRmLlN0YXJ0SW5mby5SZWRpcmVjdFN0YW5kYXJkT3V0cHV0ID0gdHJ1ZTsNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLlJlZGlyZWN0U3RhbmRhcmRFcnJvciA9IHRydWU7DQoJCXByaW50UGRmLlN0YXJ0SW5mby5Vc2VTaGVsbEV4ZWN1dGUgPSBmYWxzZTsNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLkNyZWF0ZU5vV2luZG93ID0gdHJ1ZTsNCgkJcHJpbnRQZGYuU3RhcnQoKTsNCg0KCQlzdHJpbmcgb3V0cHV0ID0gIlNURE9VVDoiICsgcHJpbnRQZGYuU3RhbmRhcmRPdXRwdXQuUmVhZFRvRW5kKCkgKyAiXG4iOw0KCQlvdXRwdXQgKz0gIlNUREVSUk9SOiIgKyBwcmludFBkZi5TdGFuZGFyZEVycm9yLlJlYWRUb0VuZCgpOw0KCQlwcmludFBkZi5XYWl0Rm9yRXhpdCg1MDAwKTsNCgkJQ1BILkxvZ0luZm8oIltURU9UT09MUzpTVFJFQU1FUlBSSU5URVJdIFBERiBDcmVhdGlvbiBSZXN1bHQ6ICIrb3V0cHV0KTsNCg0KCQlpZiAoQ1BISW5saW5lLkRlYnVnKSB7DQoJCQlTeXN0ZW0uRGlhZ25vc3RpY3MuUHJvY2Vzcy5TdGFydChwZGZwYXRoKTsNCg0KCQl9DQoJCWlmIChDUEhJbmxpbmUuRGVidWcgIT0gdHJ1ZSkgew0KCQkJLy8gRGVsZXRlIHRoZSBodG1sIGZpbGUgc291cmNlDQoJCQlGaWxlLkRlbGV0ZShvdXRmaWxlKTsNCg0KCQkJLy8gUHJpbnQgdGhlIHBkZiBwcmludGVyIHRvIHRoZSByZWNlaXB0IHByaW50ZXINCgkJCVByaW50UGRmKHRlb3Rvb2xzX3BhdGgsIHBkZnBhdGgsIFByaW50ZXJOYW1lKTsNCgkJfQ0KCX0NCg0KCXZvaWQgUHJpbnRQZGYoc3RyaW5nIHRlb3Rvb2xzX3BhdGgsIHN0cmluZyBwZGZwYXRoLCBzdHJpbmcgUHJpbnRlck5hbWUpDQoJew0KCQkvLyBDcmVhdGUgYSBwcm9jZXNzIHRvIHByaW50IHRoZSBwZGYNCgkJUHJvY2VzcyBwcmludFBkZiA9IG5ldyBQcm9jZXNzKCk7DQoNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLkZpbGVOYW1lID0gKHRlb3Rvb2xzX3BhdGggKyAiYmluXFxwZGZ0b3ByaW50ZXIuZXhlIik7DQoJCWlmIChDUEhJbmxpbmUuRGVidWcpIHsNCgkJCXByaW50UGRmLlN0YXJ0SW5mby5XaW5kb3dTdHlsZSA9IFByb2Nlc3NXaW5kb3dTdHlsZS5NYXhpbWl6ZWQ7DQoJCX0gZWxzZSB7DQoJCQlwcmludFBkZi5TdGFydEluZm8uV2luZG93U3R5bGUgPSBQcm9jZXNzV2luZG93U3R5bGUuSGlkZGVuOw0KCQl9DQoJCS8vIFRPRE8gOiBFc2NhcGUgdGhlIHByaW50ZXIgbmFtZQ0KDQoJCXN0cmluZyBhcmdzID0gIHBkZnBhdGggKyAiIFwiIiArIFByaW50ZXJOYW1lICsgIlwiIjsNCgkJQ1BILkxvZ0luZm8oIltURU9UT09MUzpTVFJFQU1FUlBSSU5URVJdIFByaW50aW5nICIrcGRmcGF0aCsiIHRvIHByaW50ZXIgIiArIFByaW50ZXJOYW1lKTsNCg0KCQkvLyBSdW4gdGhlIHByb2Nlc3MgdG8gY29udmVydCBodG1sIHRvIHBkZg0KCQlwcmludFBkZi5TdGFydEluZm8uQXJndW1lbnRzID0gYXJnczsNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLlJlZGlyZWN0U3RhbmRhcmRPdXRwdXQgPSB0cnVlOw0KCQlwcmludFBkZi5TdGFydEluZm8uUmVkaXJlY3RTdGFuZGFyZEVycm9yID0gdHJ1ZTsNCgkJcHJpbnRQZGYuU3RhcnRJbmZvLlVzZVNoZWxsRXhlY3V0ZSA9IGZhbHNlOw0KCQlwcmludFBkZi5TdGFydEluZm8uQ3JlYXRlTm9XaW5kb3cgPSB0cnVlOw0KCQlwcmludFBkZi5TdGFydCgpOw0KDQoJCXN0cmluZyBvdXRwdXQgPSAiU1RET1VUOiIgKyBwcmludFBkZi5TdGFuZGFyZE91dHB1dC5SZWFkVG9FbmQoKSArICJcbiI7DQoJCW91dHB1dCArPSAiU1RERVJST1I6IiArIHByaW50UGRmLlN0YW5kYXJkRXJyb3IuUmVhZFRvRW5kKCk7DQoJCXByaW50UGRmLldhaXRGb3JFeGl0KDUwMDApOw0KDQoJCUNQSC5Mb2dJbmZvKCJbVEVPVE9PTFM6U1RSRUFNRVJQUklOVEVSXSBQREYgUHJpbnQgUmVzdWx0OiAiK291dHB1dCk7DQoNCgkJaWYgKENQSElubGluZS5EZWJ1Zykgew0KCQkJU3lzdGVtLkRpYWdub3N0aWNzLlByb2Nlc3MuU3RhcnQocGRmcGF0aCk7DQoNCgkJfQ0KCQlpZiAoQ1BISW5saW5lLkRlYnVnICE9IHRydWUpIHsNCgkJCS8vIERlbGV0ZSB0aGUgaHRtbCBmaWxlIHNvdXJjZQ0KCQkJRmlsZS5EZWxldGUocGRmcGF0aCk7DQoNCgkJfQ0KCX0NCg0KfQ==",
+          "precompile": false,
+          "delayStart": false,
+          "id": "057a853b-b9c1-4f68-9e55-99dbe9acf0f4",
+          "weight": 0.0,
+          "type": 99999,
+          "group": null,
+          "index": 2
+        },
+        {
+          "actionId": "79406358-221e-40f4-a226-4985f87d8daa",
+          "runImmedately": true,
+          "id": "edfb13a3-0c2f-4382-a1f8-3a2f1129feaf",
+          "weight": 0.0,
+          "type": 4,
+          "group": "",
+          "index": 1
+        },
+        {
+          "actionQueueId": "766d06d5-ea3e-4c3c-b16c-ac86a06d2f7a",
+          "state": 0,
+          "clear": false,
+          "id": "0546475b-0afa-4583-aaa4-a15de4f18c47",
+          "weight": 0.0,
+          "type": 1001,
+          "group": "",
+          "index": 0
+        },
+        {
+          "actionQueueId": "766d06d5-ea3e-4c3c-b16c-ac86a06d2f7a",
+          "state": 1,
+          "clear": false,
+          "id": "ec153bfc-49d3-443f-957f-57befc21c182",
+          "weight": 0.0,
+          "type": 1001,
+          "group": "",
+          "index": 4
+        },
+        {
+          "device": null,
+          "soundFile": "P:\\Assets\\SoundEffects\\Anime wow - sound effect.mp3",
+          "finishBeforeContinuing": true,
+          "volume": 1.0,
+          "id": "0b292d95-7d30-4f86-a86c-265092da868b",
+          "weight": 0.0,
+          "type": 1,
+          "group": "",
+          "index": 3
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "a3415098-ae5c-4ecb-aaf2-289f56c06507",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SPA] Fortune Cookie",
+      "group": "Streamer Printer Addons",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "addon",
+          "value": "fortune",
+          "id": "29a87f2b-72f7-4375-a733-33ea29f5e53a",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "918878c7-9ac1-42ac-a29d-d24411e7b00d",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 1
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "09d898d4-618e-463c-a67a-416080b16fae",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Streamlabs Tip Printer",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "__source",
+          "value": "StreamlabsTip",
+          "id": "a994873e-e0cc-407c-ad4c-4802626ea7c1",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "sourceType": 2,
+          "variable": "donationFrom",
+          "id": "4cd27fb7-d5f1-4160-bddc-819251a50bb1",
+          "weight": 0.0,
+          "type": 50,
+          "group": null,
+          "index": 1
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "dd6b32e1-a723-48b8-900e-02f4082a2ac1",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "b9418e0b-5198-41b9-b5f2-c0cfbe5e5387",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SPA] Print a Waifu",
+      "group": "Streamer Printer Addons",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "aca731b7-7b91-42df-99ef-bbc149f88333",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 1
+        },
+        {
+          "variableName": "addon",
+          "value": "waifu",
+          "id": "e19e2132-9df6-4bd2-a7b6-5fb71eeb38eb",
+          "weight": 0.0,
+          "type": 123,
+          "group": "",
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "08a536f8-6f44-44e3-bbe5-63d34cf723db",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SPA] Lotto Numbers",
+      "group": "Streamer Printer Addons",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "ec72ab09-8ed5-407f-9399-3d8660324b3a",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 1
+        },
+        {
+          "variableName": "addon",
+          "value": "lotto",
+          "id": "67d0db77-6d8c-40bc-8edb-b753e2ab8126",
+          "weight": 0.0,
+          "type": 123,
+          "group": "",
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "353a6816-1cb4-4626-83d0-120e8da0942f",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SPA] Random Cat [Use Custom HTML]",
+      "group": "Streamer Printer Addons",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "addon",
+          "value": "print_html",
+          "id": "94120f53-0a07-4998-bd44-68e015f45313",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "variableName": "html",
+          "value": "<div class=\"profileImage\"><img src=\"https://thiscatdoesnotexist.com/\" /></div>",
+          "id": "b3fb341f-e330-44f4-9fb5-41e298280c06",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 1
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "43dfb9a9-efea-4e4f-a800-4f565916b6c3",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "b9770da9-1c08-4d72-929d-e59b1bd697ca",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SPA] Use Custom Text Demo",
+      "group": "Streamer Printer Addons",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "addon",
+          "value": "print_text",
+          "id": "3707180c-b103-491d-bff7-cf90bb187822",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "variableName": "text",
+          "value": "This is a test. Test test test test",
+          "id": "063916b9-cd83-4e07-8ec8-26ba4b4b50d1",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 1
+        },
+        {
+          "actionId": "fc1c1bad-eac2-4f6b-abaa-a9de9836e4a9",
+          "runImmedately": true,
+          "id": "f40b63f3-609d-42dd-89d4-4af7401df35f",
+          "weight": 0.0,
+          "type": 4,
+          "group": null,
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "79406358-221e-40f4-a226-4985f87d8daa",
+      "queue": null,
+      "enabled": true,
+      "name": "[SP] CONFIG GOES HERE",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "variableName": "Debug",
+          "value": false,
+          "id": "eaa610fa-2aaf-4f41-96d5-0a24b41b196a",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 0
+        },
+        {
+          "variableName": "PrinterName",
+          "value": "ReceiptPrinter",
+          "id": "bdf7042f-23fc-4b6a-bac8-968380d5063d",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 1
+        },
+        {
+          "variableName": "PaperSize",
+          "value": "A6",
+          "id": "f437626e-bac0-4306-bc09-72bc897148bb",
+          "weight": 0.0,
+          "type": 123,
+          "group": null,
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "142ff0ed-81eb-4b13-99f2-59373c0986b0",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Add Target Info",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "sourceType": 0,
+          "variable": "",
+          "id": "9ee0ede0-91a3-4b0e-aee0-b9401aebe034",
+          "weight": 0.0,
+          "type": 50,
+          "group": null,
+          "index": 0
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    }
+  ],
+  "queues": [
+    {
+      "id": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "blocking": true,
+      "name": "Printers"
+    }
+  ]
+}
