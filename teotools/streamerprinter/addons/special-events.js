@@ -98,6 +98,10 @@ registerSpecialEventTheme({
 			'    font-size: 1.4em;',
 			'    text-transform: uppercase;',
 			'    margin: 2mm 0;',
+			'}',
+			'.valentines-quote {',
+			'    font-style: italic;',
+			'    margin: 2mm 0;',
 			'}'
 		].join('\n');
 	},
@@ -109,11 +113,14 @@ registerSpecialEventTheme({
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
 		var bottomBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 
-		return topBanner + header + html + bottomBanner;
+		var quote = '<div class="valentines-quote">{{ valentinesQuote }}</div>';
+
+		return topBanner + header + quote + html + bottomBanner;
 	},
 
 	addData: function (data, vars) {
 		vars['specialEvent'] = 'valentines';
+		vars['valentinesQuote'] = window.valentinesQuotes[Math.floor(Math.random() * window.valentinesQuotes.length)];
 	}
 });
 
