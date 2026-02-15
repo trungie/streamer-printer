@@ -116,7 +116,7 @@ registerSpecialEventTheme({
 		var header = '<div class="valentines-header">Happy Valentine\'s Day</div>';
 		var bottomBanner = '<div class="valentines-banner">' + heartRow + '</div>';
 
-		var quote = '<div class="valentines-quote">Valentine\'s Day quote: {{ valentinesQuote }}</div>';
+		var quote = '<div class="valentines-quote">Valentine\'s Day quote:<br>{{ valentinesQuote }}</div>';
 
 		return topBanner + header + html + quote + bottomBanner;
 	},
