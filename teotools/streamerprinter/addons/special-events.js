@@ -86,11 +86,18 @@ registerSpecialEventTheme({
 	dateRange: { monthStart: 2, dayStart: 14, monthEnd: 2, dayEnd: 14 },
 
 	css: function () {
+		var heartSvg = 'data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpath d=%27M50,90 C50,90,5,60,5,30 C5,10,18,0,30,0 C38,0,45,5,50,15 C55,5,62,0,70,0 C82,0,95,10,95,30 C95,60,50,90,50,90 Z%27 fill=%27black%27/%3E%3C/svg%3E';
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
 			'.profileImage img {',
-			'    clip-path: polygon(50% 15%, 55% 8%, 62% 2%, 70% 0%, 78% 0%, 86% 3%, 93% 10%, 97% 20%, 100% 30%, 97% 42%, 90% 55%, 80% 66%, 68% 77%, 55% 87%, 50% 92%, 45% 87%, 32% 77%, 20% 66%, 10% 55%, 3% 42%, 0% 30%, 3% 20%, 7% 10%, 14% 3%, 22% 0%, 30% 0%, 38% 2%, 45% 8%);',
-			'    -webkit-clip-path: polygon(50% 15%, 55% 8%, 62% 2%, 70% 0%, 78% 0%, 86% 3%, 93% 10%, 97% 20%, 100% 30%, 97% 42%, 90% 55%, 80% 66%, 68% 77%, 55% 87%, 50% 92%, 45% 87%, 32% 77%, 20% 66%, 10% 55%, 3% 42%, 0% 30%, 3% 20%, 7% 10%, 14% 3%, 22% 0%, 30% 0%, 38% 2%, 45% 8%);',
+			'    -webkit-mask-image: url("' + heartSvg + '");',
+			'    -webkit-mask-size: contain;',
+			'    -webkit-mask-repeat: no-repeat;',
+			'    -webkit-mask-position: center;',
+			'    mask-image: url("' + heartSvg + '");',
+			'    mask-size: contain;',
+			'    mask-repeat: no-repeat;',
+			'    mask-position: center;',
 			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
