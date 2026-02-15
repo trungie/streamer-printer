@@ -1,332 +1,202 @@
 window.valentinesQuotes = [
-	// --- Funny/Punny ---
-	"You're the CSS to my HTML.",
-	"I love you more than pizza, and that's saying a lot.",
-	"You had me at 'Hello World'.",
-	"Are you a magician? Because every time I look at you, everyone else disappears.",
-	"You auto-complete me.",
-	"I'm no photographer, but I can picture us together.",
-	"You're the avocado to my toast.",
-	"If you were a vegetable, you'd be a cute-cumber.",
-	"Are you Wi-Fi? Because I'm feeling a connection.",
-	"You stole my heart, but I'll let you keep it.",
-	"I love you a latte.",
-	"You're one in a melon.",
-	"You must be a keyboard, because you're just my type.",
-	"Life without you would be un-BEAR-able.",
-	"You're the cheese to my macaroni.",
-	"I think you're egg-straordinary.",
-	"Are you a campfire? Because you're hot and I want s'more.",
-	"I'd never play hide and seek with you — someone like you is impossible to find.",
-	"You're brew-tiful.",
-	"Do you have a map? I just got lost in your eyes.",
-	"I love you from my head to-ma-toes.",
-	"You're the peanut butter to my jelly.",
-	"Are you a parking ticket? Because you've got fine written all over you.",
-	"You're soy awesome.",
-	"I think you're just tea-riffic.",
-	"You've got a pizza my heart.",
-	"If kisses were snowflakes, I'd send you a blizzard.",
-	"You're the highlight of my day — and I don't mean the marker.",
-	"I wheelie like you.",
-	"You're my favorite notification.",
-	"I'd pause my game for you.",
-	"You're worth every lost hour of sleep.",
-	"My love for you is like a software update — it never stops.",
-	"Roses are red, violets are blue, garbage gets collected, but I'd never discard you.",
-	"You're the semicolon to my code — everything falls apart without you.",
-	"I'd share my fries with you, and that's serious commitment.",
-	"Are you Google? Because you have everything I've been searching for.",
-	"You're the reason I check my phone and smile.",
-	"I don't need a Valentine — I need you every day. But today you get a card.",
-	"If love is a language, you're my syntax highlighter.",
-	"You're the ranch to my chicken nuggets.",
-	"I find you very a-PEEL-ing.",
-	"You're the WiFi password I never want to forget.",
-	"Are you a bank loan? Because you've got my interest.",
-	"I think you're flan-tastic.",
-	"You're the milk to my cookie.",
-	"You make my dopamine levels go crazy.",
-	"Are you a dictionary? Because you add meaning to my life.",
-	"I'm totally smitten — like a kitten with a mitten.",
-	"You're the butter to my bread.",
-	"Roses are red, tacos are great, I think you're cute, let's go on a date.",
-	"You're grape and don't let anyone tell you otherwise.",
-	"I'm bananas for you.",
-	"You're the sprinkles on my donut.",
-	"If you were a triangle, you'd be acute one.",
-	"You light up my life like a fridge at 3am.",
-	"I love you more than my phone battery loves dying at 1%.",
-	"You're the 'good morning' text I never knew I needed.",
-	"Are you a beaver? Because daaaam.",
-	"I think you're spec-TACO-lar.",
-	"You're the extra guac I'd always pay for.",
-	"My love for you is like pi — never ending.",
-	"You're the marshmallow in my hot chocolate.",
-	"You make my heart skip a beat — should I see a doctor?",
-	"Are you a charger? Because I'd die without you.",
-	"I donut know what I'd do without you.",
-	"You're like a fine wine — you make me dizzy.",
-	"You're the CTRL+Z to my mistakes.",
-	"I love you more than Netflix, and I really love Netflix.",
-	"You're the cherry on top of my sundae.",
-	"My heart beats for you — and that's cardio enough.",
-	"You're the reload button when my day crashes.",
-	"Are you a cat? Because I'm feline a connection.",
-	"You're un-FORK-gettable.",
-	"I love you more than chocolate, and I'm dead serious.",
-	"You're the exclamation mark in the happiest sentence I could ever write!",
-	"If you were a fruit, you'd be a fineapple.",
-	"You're the 'skip ad' button of my bad days.",
-	"Roses are red, I'm going to bed, just kidding, let's hang out instead.",
-	"You make me feel like a microwave — you warm me up inside.",
-	"Are you an elevator? Because you lift me up.",
-	"You're the plot twist I didn't see coming.",
-	"I like you a waffle lot.",
-	"You're the gravy to my mashed potatoes.",
-	"I'd delete my browser history for you. That's real trust.",
-	"You're the sunscreen to my sunburn — soothing and essential.",
-	"Love is sharing your snacks, and I'd share mine with you. Maybe.",
-	"You're the 'found it!' in a game of Where's Waldo.",
-	"You're like a dictionary — you add meaning to everything.",
-	"Are you a light switch? Because you turn me on. Wait, that came out wrong.",
-	"You're the ice cream on a hot day — sweet and refreshing.",
-	"I'd give up garlic bread for you. Okay no, but I'd share it.",
-	"Roses are red, my face is too, that only happens when I'm around you.",
-	"You're the sock that never goes missing in the laundry.",
-	"You make me feel like I just found money in my old jacket.",
-	"I love you more than free shipping.",
-	"You're the 'yes' in a world full of 'we'll see'.",
-	"You're my human diary — I tell you everything.",
-	"If love were a taco, you'd be the whole platter.",
-	"You're the password to my happiness — and I'll never reset you.",
-	"Are you a meme? Because I can't stop sharing you with my friends.",
-	"I'm falling for you harder than I fall for clickbait.",
-	"You're the corner piece of my puzzle — you hold everything together.",
-	"I love you more than I love staying in bed on a rainy day.",
-	"Are you a nap? Because I've been dreaming about you all day.",
-	"You're like a good book — I never want to put you down.",
-	"My love for you is like my laundry — it never stops piling up.",
-	"You're the auto-save of my life.",
-	"I love you like a squirrel loves nuts. That's a lot.",
-	"You're the perfectly toasted marshmallow of my life.",
-	"Are you a magnet? Because I'm attracted to you.",
-	"I love you more than sleeping in on a Saturday.",
-	"You're the WiFi signal that never drops.",
-	"Roses are red, violets are fine, you be the six, I'll be the nine. Wait—",
-	"You're the bonus fry at the bottom of the bag.",
-	"I love you to the fridge and back.",
-	"Are you a blanket? Because I want to wrap myself up in you.",
-	"You're the 'undo send' I never need.",
-	"I'd wait in line at the DMV for you.",
-	"You're like a software bug — you're always on my mind.",
-	"My love for you burns brighter than my laptop on my legs.",
-	"You're the reason I look at my phone and smile on the bus like a weirdo.",
-	"I love you more than memes, and that's my love language.",
-	"You're the matching sock I thought I'd never find.",
-	"Are you my appendix? Because I don't understand how you work, but this feeling in my stomach makes me want to take you out.",
-	"You're the popcorn to my movie night.",
-	"I love you more than I love hitting every green light.",
-	"You're the unexpected upgrade to first class.",
-	"If you were a dessert, you'd be the last slice everyone fights over.",
-	"You're the 'low battery' warning that actually makes me stop and pay attention.",
-	"I'd let you have the last slice. And the remote. At the same time.",
-	"You're like a good pun — you always make me groan and smile.",
-	"Are you Friday? Because I've been waiting for you all week.",
-	"I love you more than I hate Mondays, and that's infinite.",
-	"You're the bubble wrap I can't stop popping.",
-	"You make my heart do the thing that people write songs about.",
-	"I love you more than coffee. Please don't make me prove it.",
-	"You're the delete key for all my bad days.",
-	"Are you a sunset? Because you take my breath away. Also I'm out of shape.",
-
-	// --- Wholesome/Friendship ---
-	"Love isn't just romance — it's every kind word you share.",
-	"The greatest gift is a friend who knows your heart.",
-	"A true friend is the greatest of all blessings.",
-	"Friends are the family we choose for ourselves.",
-	"Kindness is the language the deaf can hear and the blind can see.",
-	"You don't have to be perfect to be loved.",
-	"Some people make the world more special just by being in it.",
-	"A good friend knows all your stories. A best friend helped you write them.",
-	"You are someone's reason to smile today.",
-	"The world is a better place with you in it.",
-	"Love grows when shared with the people around you.",
-	"A warm heart is the best thing you can carry with you.",
-	"True friends are never apart, maybe in distance but never in heart.",
-	"Being deeply loved by someone gives you strength.",
-	"The best mirror is an old friend.",
-	"Your vibe attracts your tribe.",
-	"No act of kindness, no matter how small, is ever wasted.",
-	"People who love you are not fooled by mistakes you have made.",
-	"Friendship is born at that moment when one person says to another, 'You too?'",
-	"A single rose can be my garden — a single friend, my world.",
-	"Love is the only force capable of transforming an enemy into a friend.",
-	"The most beautiful discovery true friends make is that they can grow together.",
-	"Good friends are like stars — you don't always see them, but they're always there.",
-	"To love and be loved is to feel the sun from both sides.",
-	"Where there is friendship, there is our natural home.",
-	"A loving heart is the truest wisdom.",
-	"We are most alive when we're in love — with our friends, our passions, our world.",
-	"Love is not about possession, it's about appreciation.",
-	"Friendship doubles your joy and divides your sorrow.",
-	"The best things in life are the people you love.",
-	"Every friend was once a stranger who decided to stay.",
-	"You make the ordinary feel extraordinary.",
-	"A hug is a handshake from the heart.",
-	"Love isn't something you find. Love is something that finds you.",
-	"Surround yourself with those who bring out the best in you.",
-	"The heart that gives, gathers.",
-	"Joy is best when shared.",
-	"Love is friendship set to music.",
-	"You are never too old to need a friend.",
-	"Some souls just understand each other upon meeting.",
-
-	// --- Self-Love ---
-	"Don't forget to love yourself today.",
-	"You are enough, exactly as you are.",
-	"Be your own Valentine.",
-	"Self-love is the greatest revolution.",
-	"You deserve the love you keep giving to everyone else.",
-	"Loving yourself isn't vanity — it's sanity.",
-	"You are worthy of the love you dream about.",
-	"The most important relationship you'll ever have is with yourself.",
-	"Talk to yourself like someone you love.",
-	"You don't need someone to complete you. You are already whole.",
-	"Your value doesn't decrease based on someone's inability to see your worth.",
-	"Fall in love with taking care of yourself.",
-	"Be proud of who you are and not ashamed of how someone else sees you.",
-	"You owe yourself the love that you so freely give to others.",
-	"Believe in yourself a little more today.",
-	"You are your own kind of beautiful.",
-	"Self-love is the best love.",
-	"Be gentle with yourself. You're doing the best you can.",
-	"You are allowed to be both a masterpiece and a work in progress.",
-	"Happiness starts with you — not with your relationships, not with your job, not with your money, but with you.",
-	"Take a moment today to appreciate how far you've come.",
-	"Your heart is big enough to love yourself and others.",
-	"Put yourself at the top of your to-do list every single day.",
-	"The way you treat yourself sets the standard for others.",
-	"You are not a drop in the ocean. You are the entire ocean in a drop.",
-	"Love yourself first and everything else falls into line.",
-	"Self-care is how you take your power back.",
-	"You are braver than you believe, stronger than you seem, and smarter than you think.",
-	"Remind yourself that it's okay not to be perfect.",
-	"You alone are enough. You have nothing to prove to anybody.",
-	"Nourish your mind, body, and soul with love.",
-	"The more you love yourself, the less nonsense you'll tolerate.",
-	"Don't let anyone rent space in your head unless they're a good tenant.",
-	"Today, give yourself permission to rest.",
-	"Your mental health is more important than their opinion.",
-	"Being yourself is the prettiest thing you can be.",
-	"You can't pour from an empty cup — take care of yourself first.",
-	"Celebrate yourself today. You've earned it.",
-	"Love yourself so much that when someone treats you wrong, you recognize it.",
-	"Your relationship with yourself sets the tone for every other relationship you have.",
-	"You didn't come this far to only come this far.",
-	"Stop waiting for someone to bring you flowers. Plant your own garden.",
-	"You are the main character. Act like it.",
-	"Your peace is more important than driving yourself crazy trying to understand why something happened.",
-	"You don't have to explain your worth to anyone who can't see it.",
-	"The love you seek is already inside you.",
-	"Be the energy you want to attract.",
-	"You are not too much. You are just right for the people who truly see you.",
-	"Healing isn't linear, and that's okay.",
-	"Choose yourself as fiercely as you choose the people you love.",
-	"Your softness is not weakness. It's your superpower.",
-	"Protect your peace like it's your most valuable possession — because it is.",
-	"You don't need to shrink yourself to fit in someone else's world.",
-	"Give yourself credit for how far you've come, not grief for how far you have to go.",
-	"Bloom at your own pace.",
-	"The moment you start to wonder if you deserve better, you do.",
-	"You are not behind. You are on your own timeline.",
-	"Stop dimming your light so others feel comfortable around you.",
-	"Forgiving yourself is just as important as forgiving others.",
-	"You are not responsible for other people's happiness, only your own.",
-	"It's okay to outgrow people. It's called self-preservation.",
-	"The most powerful thing you can do is show up as yourself.",
-	"Rest is not a reward. It's a right.",
-	"Let go of who you think you're supposed to be and embrace who you are.",
-	"You are somebody's dream come true — start with your own.",
-	"Be kinder to yourself than you think you deserve.",
-	"Your scars tell a story of survival. Wear them with pride.",
-	"You don't need anyone's approval but your own.",
-	"Treat yourself the way you'd treat your best friend.",
-	"Not everything that weighs you down is yours to carry.",
-	"Growth looks good on you.",
-	"You are the love of your own life.",
-	"It's okay to say no without explaining yourself.",
-	"Your feelings are valid, even when others don't understand them.",
-	"You are not your mistakes. You are the lessons you learned from them.",
-	"Some days the bravest thing you can do is just keep going.",
-	"Give yourself permission to take up space.",
-	"The world needs your unique light — don't hide it.",
-	"Comparison is the thief of joy. Run your own race.",
-	"Your worth is not measured by your productivity.",
-	"Being alone is not the same as being lonely. Enjoy your own company.",
-	"The only validation you need is your own.",
-	"You are a limited edition. There is no one else like you.",
-	"It's okay to start over. It's called a fresh chapter, not a failure.",
-	"Your energy is precious. Spend it on things that matter.",
-	"You can be a good person with a kind heart and still say no.",
-	"Every morning is a chance to fall in love with yourself all over again.",
-	"You are strong enough to face what comes next.",
-	"The best project you'll ever work on is yourself.",
-
-	// --- Inspirational ---
-	"Love is not about finding the right person, but being the right person.",
-	"In a world where you can be anything, be kind.",
-	"Where there is love, there is life.",
-	"The best thing to hold onto in life is each other.",
-	"Love recognizes no barriers.",
-	"Keep love in your heart. A life without it is like a sunless garden.",
-	"We are shaped and fashioned by what we love.",
-	"Love is a canvas furnished by nature and embroidered by imagination.",
-	"The greatest thing you'll ever learn is just to love and be loved in return.",
-	"Let all that you do be done in love.",
-	"Love is the bridge between you and everything.",
-	"Life is the flower for which love is the honey.",
-	"The best proof of love is trust.",
-	"Love does not dominate; it cultivates.",
-	"When we love, we always strive to become better.",
-	"There is always some madness in love, but there is also always some reason in madness.",
-	"At the touch of love, everyone becomes a poet.",
-	"Love planted a rose, and the world turned sweet.",
-	"The giving of love is an education in itself.",
-	"Love is when the other person's happiness is more important than your own.",
-	"You know you're in love when you can't fall asleep because reality is finally better than your dreams.",
-	"Love is an endless act of forgiveness.",
-	"One word frees us of all the weight and pain of life: that word is love.",
-	"To love abundantly is to live abundantly.",
-	"Love is the whole thing. We are only pieces.",
-	"All we need to make us happy is something to be enthusiastic about... and someone to love.",
-	"The soul that can speak through the eyes can also kiss with a gaze.",
-	"Love doesn't make the world go round. Love is what makes the ride worthwhile.",
-	"Being someone's first love may be great, but to be their last is beyond perfect.",
-	"A loving heart is the beginning of all knowledge.",
-	"Love cures people — both the ones who give it and the ones who receive it.",
-	"The more love you give, the more love you have.",
-	"Every heart sings a song, incomplete, until another heart whispers back.",
-	"Love is like the wind — you can't see it, but you can feel it.",
-	"Hope is the heartbeat of the soul, and love is its rhythm.",
-	"Let love be your compass.",
-	"Wherever there is a human being, there is an opportunity for kindness.",
-	"Love grows more tremendously full, swift, poignant, as the years multiply.",
-	"To be brave is to love someone unconditionally.",
-	"The world needs more love letters and fewer text messages.",
-
-	// --- Movie Quotes ---
-	"I love you 3000.",
-	"To infinity and beyond — happy Valentine's Day!",
-	"You're the Obi-Wan for me.",
-	"You are my precious.",
-	"As you wish.",
-	"You had me at 'I know.'",
-	"May the love be with you.",
-	"I like you more than Luke likes blue milk.",
-	"You're the Samwise to my Frodo.",
-	"I lava you — like that Pixar short.",
-	"Love is the one thing that transcends time and space.",
-	"I love you more than hobbits love second breakfast.",
-	"You're my endgame."
+	// 1
+	"If you were a booger, I'd pick you first.",
+	// 2
+	"Are you a fart? Because you blew me away.",
+	// 3
+	"I love you like a back pain — always there and impossible to ignore.",
+	// 4
+	"Happy Valentine's Day! I choo-choo-choose you. Get it? Like a train. I'm sorry.",
+	// 5
+	"Roses are red, I'm not that bright, but I Googled 'romantic stuff' and this felt right.",
+	// 6
+	"You make my heart beat faster. Or maybe that's the energy drink. Either way, happy Valentine's Day.",
+	// 7
+	"I'd take a bullet for you. Not in the head though. Maybe the leg. Actually let me think about it.",
+	// 8
+	"If you were a burger, you'd be a McGorgeous. I'm sorry. I'm so sorry.",
+	// 9
+	"Do you like raisins? How about a date? No? Okay I'll just stand here then.",
+	// 10
+	"You're hot. Like a microwaved Hot Pocket. Burning on the outside, frozen in the middle. Wait—",
+	// 11
+	"I made you a valentine but I accidentally ate it. It was chocolate. You understand.",
+	// 12
+	"I think about you the way I think about pizza — constantly, and usually at 2am.",
+	// 13
+	"I like your face. I mean I like YOU. I mean... anyway happy Valentine's Day goodbye.",
+	// 14
+	"Our love is like a fridge — I don't know why, but I keep opening it hoping something new is inside.",
+	// 15
+	"I tried to write you a poem. It was bad. Here's a chicken nugget instead. Emotionally, I mean.",
+	// 16
+	"You make my palms sweaty. That's either love or I need to see a doctor. Probably both.",
+	// 17
+	"I love you AND cheese. Don't ask me to rank. My therapist said I don't have to.",
+	// 18
+	"Cupid took one look at me and said 'this one's gonna need extra arrows.'",
+	// 19
+	"I wrote you a love letter but it autocorrected to something about pizza. Honestly, it was better.",
+	// 20
+	"I'd fight a bear for you. A small one. Maybe a raccoon. Actually, raccoons are scary — I'd yell at it from a distance.",
+	// 21
+	"Roses are red, violets are blue, I have five fingers and the middle one is... pointing to my heart. What did you think?",
+	// 22
+	"You're the reason I look down at my phone and walk into a pole.",
+	// 23
+	"I love you more than yesterday. Yesterday you really got on my nerves.",
+	// 24
+	"Roses are red, I have a phone, nobody texts me, forever alone. Happy Valentine's Day!",
+	// 25
+	"If we were socks, we'd make a great pair. Mostly because we both smell a little weird.",
+	// 26
+	"I love you enough to share the blanket. Not the whole thing though, don't push it.",
+	// 27
+	"I'd get off the couch for you. Probably. If you asked twice.",
+	// 28
+	"Happy Valentine's Day to the only person who's seen me eat a whole pizza and still stuck around.",
+	// 29
+	"My love language is awkward silence and overthinking everything you said three days ago.",
+	// 30
+	"You complete me. Mostly because I'm a disaster on my own.",
+	// 31
+	"Our love is like a microwave burrito — hot, questionable, but I keep coming back.",
+	// 32
+	"I'd walk through fire for you. Okay maybe not fire. A light drizzle. With an umbrella.",
+	// 33
+	"You had me at 'there's food at my place.'",
+	// 34
+	"I love you more than naps, and I REALLY love naps.",
+	// 35
+	"Happy Valentine's Day. I'm emotionally available today. Don't get used to it.",
+	// 36
+	"You're the ketchup to my fries — I make a mess without you.",
+	// 37
+	"Roses are red, tacos are delicious, you're kind of okay and mildly suspicious.",
+	// 38
+	"I like you so much I'd let you have the last slice. I'd be upset about it, but I'd do it.",
+	// 39
+	"My heart says yes. My social anxiety says please stop looking at me.",
+	// 40
+	"You're like a software update — I know you're good for me but I keep hitting 'remind me later.'",
+	// 41
+	"I got you flowers. They're dead now. Just like my ability to express emotions. Happy Valentine's Day.",
+	// 42
+	"If you were a potato, you'd be a hot potato. That's it. That's the compliment.",
+	// 43
+	"I love you like a fat kid loves cake. I'm the fat kid in this scenario.",
+	// 44
+	"You're so cute it's annoying. Like a puppy that pees on the floor. But cuter. And less peeing. Hopefully.",
+	// 45
+	"I'd share my food with you. I'd complain about it silently, but I'd share.",
+	// 46
+	"You're the wifi to my will to live — I fall apart without you.",
+	// 47
+	"This is me shooting my shot. It's an airball. But at least I tried.",
+	// 48
+	"I'm not saying you're the one, but my mom already named our kids.",
+	// 49
+	"You had me at 'I brought snacks.'",
+	// 50
+	"I'd delete my search history for you. And that, my friend, is true love.",
+	// 51
+	"I love you so much I'd let you use my phone. With supervised access.",
+	// 52
+	"Happy Valentine's Day. I made dinner. It's cereal. You're welcome.",
+	// 53
+	"If love is blind, that explains a lot about us.",
+	// 54
+	"I want to grow old with you. Mostly because I can't figure out the TV remote alone.",
+	// 55
+	"You're the gravy to my mashed potatoes — things are just wet and sad without you. That came out wrong.",
+	// 56
+	"I love you with every pizza my heart.",
+	// 57
+	"Roses are red, I'm going to bed, just kidding come over and bring bread.",
+	// 58
+	"I'd give you a kidney. Not mine. But I'd find one.",
+	// 59
+	"You make me feel things. Mostly confusion. But also warm stuff. In my chest area.",
+	// 60
+	"Happy Valentine's Day. Don't read too much into it. Okay read a little into it.",
+	// 61
+	"I looked at you and thought: yeah, I'd split a dessert with this person.",
+	// 62
+	"You're like a candle — if I forget about you, the house burns down.",
+	// 63
+	"If I had to choose between you and a million dollars... can I think about it? I'm KIDDING. Mostly.",
+	// 64
+	"I love you with my whole heart. And my stomach. My stomach loves you a lot.",
+	// 65
+	"My love for you burns like my toast this morning. Intense and a little concerning.",
+	// 66
+	"You're like a parking spot — attractive, hard to find, and I panic when I see you.",
+	// 67
+	"Happy Valentine's Day! I Googled 'what to say' and here we are.",
+	// 68
+	"I love you more than free samples at Costco. That's peak romance right there.",
+	// 69
+	"I'm not great with words. Or feelings. Or eye contact. But I like you. A lot. Don't look at me.",
+	// 70
+	"You're my favorite person to be awkward around.",
+	// 71
+	"I tried to be smooth but I tripped. Emotionally and also physically just now.",
+	// 72
+	"Roses are red, I can't rhyme, happy Valentine's Day, you're having a good... day.",
+	// 73
+	"If you were a vegetable, I'd visit you in the hospital every day. Wait, that's dark. Happy Valentine's Day!",
+	// 74
+	"Our love is like my cooking — questionable but made with love. Please don't smell it.",
+	// 75
+	"Happy Valentine's Day. I'm going to stare at you adoringly now. Please don't call the police.",
+	// 76
+	"I made you a mixtape. It's just one song on repeat. It's the pizza delivery hold music.",
+	// 77
+	"I love you to the moon and back. Just kidding, I'm tired. I love you to the couch and back.",
+	// 78
+	"You're the reason I put on pants today. That's basically a marriage proposal.",
+	// 79
+	"I prepared a speech but I forgot it. So... you're nice. And your hair does a thing. I like the thing.",
+	// 80
+	"Happy Valentine's Day! I got you a card. It was expensive. Please appreciate it for both of us.",
+	// 81
+	"You know that butterfly feeling in your stomach? I have that. Oh wait, that's hunger. Wanna get tacos?",
+	// 82
+	"I love you like Kanye loves Kanye.",
+	// 83
+	"My love for you is like diarrhea — I just can't hold it in. Sorry. Happy Valentine's Day.",
+	// 84
+	"I'd let you eat crackers in my bed. That's the highest level of trust I can offer.",
+	// 85
+	"If I could rearrange the alphabet, I'd put U and I together. And also move Q because what is Q even doing.",
+	// 86
+	"I was going to give you something amazing for Valentine's Day, but then I remembered I'm broke. So here's my love.",
+	// 87
+	"You're like a dictionary — you give my life meaning. Also you're thick. I MEAN your personality has depth.",
+	// 88
+	"I love you more than garlic bread. I've never said that to anyone. I might be lying. I'm not sure.",
+	// 89
+	"Happy Valentine's Day! Our love story is like a rom-com. Mostly because people are laughing at us.",
+	// 90
+	"Together we're like a really bad sandwich — doesn't make sense, but somehow it works.",
+	// 91
+	"You're the lid to my Tupperware — without you, I'm basically useless.",
+	// 92
+	"I wanted to surprise you with breakfast in bed. But I set off the smoke alarm. Surprise!",
+	// 93
+	"My love for you is like my phone battery — it dies when I need it most. Wait, no. Let me start over.",
+	// 94
+	"You're the extra nugget in the box. Unexpected and honestly the best part.",
+	// 95
+	"Happy Valentine's Day! I love you. Please say it back. The silence is killing me.",
+	// 96
+	"I'd swim across the ocean for you. Actually, I can barely swim. I'd take a boat. A nice one though.",
+	// 97
+	"You're the only person I'd share my Netflix password with. After my mom. And my sister. But you're up there.",
+	// 98
+	"Roses are red, my cooking is tragic, but loving you feels like actual magic.",
+	// 99
+	"I'd go to IKEA with you on a Saturday. If that's not love, I don't know what is.",
+	// 100
+	"Happy Valentine's Day! I love you almost as much as I love telling people I love you. Wait, that's weird. Forget I said that."
 ];
