@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receipt</title>
+	<!-- Add more google fonts here -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+	
+    <style type="text/css">
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-size: 1.0em;
+            background-color: #7a7a7a;
+			text-align: center;
+        }
+        #receipt {
+            overflow-wrap: break-word;
+            padding:5px;
+            background-color: #efefef;
+        }
+		.datetime {
+			font-size: 1.0em;
+		}
+        .A5 {
+            width: 210mm;
+        }
+        .A6 {
+            width: 148mm;
+        }
+        .A7 {
+            width: 105mm;
+        }
+        .A8 {
+            width: 74mm;
+        }
+        .A9 {
+            width: 52mm;
+        }
+        .A10 {
+            width: 37mm;
+        }
+
+        .B5 {
+            width: 250mm;
+        }
+        .B6 {
+            width: 176mm;
+        }
+        .B7 {
+            width: 125mm;
+        }
+        .B8 {
+            width: 88mm;
+        }
+        .B9 {
+            width: 62mm;
+        }
+        .B10 {
+            width: 44mm;
+        }
+
+
+		/* FONTS */
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.5em;
+		}
+		h2 {
+			font-family: 'Oswald', sans-serif;
+			font-size:1.75em;
+			margin:1mm;
+			text-transform:uppercase;
+		}
+		h3 {
+			font-family: 'Oswald', sans-serif;
+			font-size:1.25em;
+			margin:1mm;
+			text-transform:uppercase;
+		}	
+		h4 {
+			font-family: 'Roboto', sans-serif;
+			font-size:1.25em;
+			margin:1mm;
+		}		
+		.datetime {
+			font-family: 'Roboto', sans-serif;		
+			font-weight: italic;
+			font-size: 1.00em;
+		}
+		
+		.profileImage {
+			width: 100%;
+			height: auto;
+			padding-bottom: 5mm;
+			padding-right: auto;
+			padding-left: auto;
+		}
+		
+		.profileImage img {
+			width: 100%;
+			text-align:center;
+			object-fit: contain;
+			padding-right: auto;
+			padding-left: auto;
+		}
+		
+		#receipt {
+			width: 100mm;
+			break-inside: avoid;
+		}
+		.pageBreak {
+			page-break-after: always;
+			page-break-after: always !important;
+			page-break-before: always !important;
+		}
+		footer {
+			margin-top: 10mm;
+			page-break-after: always;
+		}
+		.footer_spacing {
+			height: 100mm;
+		}
+        @media print {
+            html, body {
+                padding: 0mm;
+            }
+            body {
+                font-size: 2em;
+				font-family: 'Courier New', monospace;
+				
+				/* Centered text */
+				text-align: center;
+            }
+        }
+    </style>
+
+
+	<script type="text/javascript" src="../js/auth.js"></script>
+	<script type="text/javascript" src="../js/swig.min.js"></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<!-- load a list of fortunes, goes with the fortunes addon -->
+	<script type="text/javascript" src="../addons/fortunes.js"></script>
+	<script type="text/javascript" src="../addons/addons.js"></script>
+</head>
+<body onLoad="renderTemplate()">
+
+<div id="receipt">
+Error rendering receipt template
+</div>
+
+<div style="display:none" id="ini">

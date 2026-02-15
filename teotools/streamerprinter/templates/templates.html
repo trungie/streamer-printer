@@ -1,0 +1,247 @@
+<!-- Start of templates -->
+<div id="anon_gift_sub_template" class="template" style="display: none">
+	<h2>Anonymous Gift Sub</h2>
+	<br />
+    <div class="datetime">{{datetime}}</div>
+    <br />
+    <h2>Gifter:</h2> 
+	<h3>Anonymous</h3>
+    <h2>Subber:</h2> 
+	<h3>{{ sub_display_name }}</h3>
+	{% if month_total %}
+		{{month_total}} months<br /><br />
+	{% endif %}
+    <h4>{{tier}} Sub</h4>
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+
+</div>
+
+<div id="gift_bomb_template" class="template" style="display: none">
+	<h2>Gift Bomb</h2>
+    <div class="datetime">{{datetime}}</div>
+	{% if userProfileImage %}
+	<div class="profileImage">
+		{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+	
+    <h2>Gifter:</h2> 
+	<h3>{{ sub_display_name }}</h3>
+	<br />
+    <h4>Has gifted {{ gifts }} Subs</h4>
+	<br />
+	<h2>Recipient:</h2> 
+	<h3>{{ recipient_display_name }}</h3>
+	
+    {% if month_total == 1 %}
+    {{month_total}} month
+    {% else %}
+    {{month_total}} months
+    {% endif %}
+	
+    <h4>{{tier|capitalize}} Sub</h4>
+	
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+</div>
+
+<div id="gift_sub_template" class="template" style="display: none">
+	<h2>Gift Subscription</h2>
+    <div class="datetime">{{datetime}}</div>
+	{% if userProfileImage %}
+	<div class="profileImage">
+		{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+
+    <h2>Gifter:</h2> <h3>{{ sub_display_name }}</h3>
+    <h2>Recipient:</h2> <h3>{{ recipient_display_name }}</h3>
+
+    {% if month_total == 1 %}
+    {{month_total}} month
+    {% else %}
+    {{month_total}} months
+    {% endif %}
+
+    <h4>{{tier|capitalize}} Sub</h4>
+
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+</div>
+
+<div id="nongift_sub_template" class="template" style="display: none">
+	<h2>Subscription</h2>
+    <div class="datetime">{{datetime}}</div>
+    <br />
+	{% if userProfileImage %}
+	<div class="profileImage">
+		{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+	
+	<h3>{{ sub_display_name }}</h3>
+	{% if month_total %}
+    Subscribed for a total of {{month_total}} months<br /><br />
+	{% endif %}
+
+    <h4>{{tier|capitalize}} Sub</h4>
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+</div>
+
+<div id="anon_bits_template" class="template" style="display: none">
+	<h2>Bits</h2>
+    <div class="datetime">{{datetime}}</div>
+    <br />
+	
+    <h3>Anonymous</h3>
+	<h4>
+	Has cheered<br/>
+    {{ amount }} bits<br />
+	{% if total %}	
+    For a total of {{ total }} bits donated<br />
+	{% endif %}
+	</h4>
+
+    {% if message %}
+    <h4>Message:</h4>
+    {{ message }}
+    {% endif %}
+
+</div>
+
+<div id="bits_template" class="template" style="display: none">
+	<h2>Bits</h2>
+    <div class="datetime">{{datetime}}</div>
+    <br />
+	{% if userProfileImage %}
+	<div class="profileImage">
+		{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+	
+    <h3>{{ name }}</h3>
+	<h4>
+	Has cheered<br/>
+    {{ amount }} bits<br />
+	{% if total %}	
+    For a total of {{ total }} bits donated<br />
+	{% endif %}
+	</h4>
+
+    {% if message %}
+    <h4>Message:</h4>
+    {{ message }}
+    {% endif %}
+
+</div>
+
+<div id="follow_template" class="template" style="display: none">
+    <div class="datetime">{{datetime}}</div>
+    <h3>{{ user }}</h3>
+    <h4>Thank you for the follow!</h4>
+    <br />
+</div>
+
+
+<div id="generic_reward_redemption" class="template" style="display: none">
+    <div class="datetime">{{datetime}}</div>
+
+    <h3>{{ name }} redeemed {{ redeem_name }}</h3>
+	
+    <br />
+    {% if message %}
+    <h4>Message:</h4>
+    {{ message }}
+    {% endif %}
+    <br />
+</div>
+
+<div id="raid_template" class="template" style="display: none">
+    <div class="datetime">{{datetime}}</div>
+    <h3>{{ user }} has raided the channel with {{ viewers }} Viewers!</h3><br />
+
+	{% if userProfileImage %}
+	<div class="profileImage">
+	{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+	
+
+</div>
+
+
+<div id="host_template" class="template" style="display: none">
+    <div class="datetime">{{datetime}}</div>
+
+    <h3>{{ user }} has hosted the channel with {{ viewers }} Viewers!</h3><br />
+    <br />
+</div>
+
+
+<div id="streamlabs_tip" class="template" style="display: none">
+    <div class="datetime">{{datetime}}</div>
+	<h2>Streamlabs Tip</h2>
+	<br />
+	{% if userProfileImage %}
+	<div class="profileImage">
+	{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+			
+	<br />
+	{% if currencySymbol %}
+    <h3>{{ name }} has donated 	{{ currencySymbol }}{{ amount }} </h3>
+	{% else %}
+    <h3>{{ name }} has donated {{ amount }} in {{ currency }}</h3><br />
+	{% endif %}
+    <br />
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+</div>
+
+
+<div id="streamelements_tip" class="template" style="display: none">
+	<h2>StreamElements Tip</h2>
+    <div class="datetime">{{datetime}}</div>
+	<br />
+	{% if userProfileImage %}
+	<div class="profileImage">
+	{{ userProfileImage|image }}
+	</div>
+	{% endif %}
+	<br />
+	{% if currencySymbol %}
+    <h3>{{ name }} has donated 	{{ currencySymbol }}{{ amount }} </h3>
+	{% else %}
+    <h3>{{ name }} has donated {{ amount }} in {{ currency }}</h3><br />
+	{% endif %}
+    <br />
+    {% if message %}
+    <em>Message:</em>
+    {{ message }}
+    {% endif %}
+</div>
+
+<div id="channelpoint_template" class="template" style="display: none">
+	<h2>Channel Point Redemption</h2>
+    <div class="datetime">{{datetime}}</div>
+
+    <h3>{{ name }} redeemed {{ redeem_name }}</h3><br />
+    <br />
+    <em>Message:</em>
+    {{ message }}
+</div>
+
+<!-- End of Templates -->

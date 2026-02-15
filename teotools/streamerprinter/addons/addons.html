@@ -1,0 +1,61 @@
+<!-- Start of Template -->
+<div id="waifu_template" class="template" style="display: none">
+<h2>WAIFU FOR</h2>
+<h3>{{user}}</h3>
+{% if waifuImage %}
+<div class="profileImage">
+{{ waifuImage|image }}
+</div>
+{% endif %}
+</div>
+<!-- End of Template -->
+
+<!-- Start of Template -->
+<div id="lotto_template" class="template" style="display: none">
+<h2>LOTTO NUMBERS FOR</h2>
+<h3>{{user}}</h3>
+<h4>{{ lottoNumbers }}</h4>
+</div>
+<!-- End of Template -->
+
+<!-- Start of Template -->
+<div id="lotto_template" class="template" style="display: none">
+    FEELING LUCKY?<br />
+    HERE ARE YOUR LOTTERY NUMBERS!<br />
+    <br />
+    {{ randomNumbers(50,5) }}
+    <br />
+    <br />
+    <div class="datetime">{{datetime}}</div>
+    <br />
+
+    <h3>{{ name }} redeemed {{ redeem_name }}</h3>
+
+    {% if message %}
+    <h4>Message:</h4>
+    {{ message }}
+    {% endif %}
+
+</div>
+<!-- End of Template -->
+
+<!-- Start of Template -->
+<div id="fortune_template" class="template" style="display: none">
+<h2>FORTUNE FOR</h2>
+<h3>{{user}}</h3>
+<h4>"{{ fortune }}"</h4>
+</div>
+<!-- End of Template -->
+
+
+<!-- Start of Template -->
+<div id="print_text_template" class="template" style="display: none">
+<h4>{{ text }}</h4>
+</div>
+<!-- End of Template -->
+
+<!-- Start of Template -->
+<div id="print_html_template" class="template" style="display: none">
+<h4>{{ html|raw }}</h4>
+</div>
+<!-- End of Template -->
