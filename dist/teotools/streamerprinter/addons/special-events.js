@@ -88,6 +88,22 @@ registerSpecialEventTheme({
 	css: function () {
 		return [
 			'/* --- Valentine\'s Day Theme --- */',
+			'.heart-profile-wrap {',
+			'    position: relative;',
+			'    display: inline-block;',
+			'    width: 100%;',
+			'}',
+			'.heart-profile-wrap img {',
+			'    display: block;',
+			'    width: 100%;',
+			'}',
+			'.heart-profile-overlay {',
+			'    position: absolute;',
+			'    top: 0;',
+			'    left: 0;',
+			'    width: 100%;',
+			'    height: 100%;',
+			'}',
 			'.valentines-banner {',
 			'    font-size: 1.5em;',
 			'    letter-spacing: 0.3em;',
@@ -124,6 +140,21 @@ registerSpecialEventTheme({
 	addData: function (data, vars) {
 		vars['specialEvent'] = 'valentines';
 		vars['valentinesQuote'] = window.valentinesQuotes[Math.floor(Math.random() * window.valentinesQuotes.length)];
+
+		var originalImageSrc = imageSrc;
+		imageSrc = function (src) {
+			if (!src) return originalImageSrc(src);
+			var img = originalImageSrc(src);
+			var svg = '<svg class="heart-profile-overlay" viewBox="0 0 100 100"'
+				+ ' preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">'
+				+ '<path fill-rule="evenodd" fill="#efefef" d="'
+				+ 'M0,0 H100 V100 H0 Z '
+				+ 'M50,88 C50,88 8,60 8,30 C8,12 20,2 32,2 C40,2 46,7 50,16 '
+				+ 'C54,7 60,2 68,2 C80,2 92,12 92,30 C92,60 50,88 50,88 Z'
+				+ '"/></svg>';
+			return '<div class="heart-profile-wrap">' + img + svg + '</div>';
+		};
+		imageSrc.safe = true;
 	}
 });
 

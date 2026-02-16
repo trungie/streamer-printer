@@ -119,6 +119,31 @@ SOURCE=$(python3 -c "import json,sys; print(json.load(sys.stdin).get('source','u
 WRAPPED_JSON="window.data = ${JSON_DATA}
 window.sourceProgram = 'streamerbot';"
 
+# --- Inject Claude API key and prompt if available ---
+
+CLAUDE_KEY_FILE="$SP_DIR/.claude-api-key"
+CLAUDE_PROMPT_FILE="$SP_DIR/addons/april-fools-prompt.txt"
+
+if [[ -f "$CLAUDE_KEY_FILE" ]]; then
+    ESCAPED_KEY=$(python3 -c "import json,sys; print(json.dumps(sys.stdin.read().strip()))" < "$CLAUDE_KEY_FILE")
+    WRAPPED_JSON="${WRAPPED_JSON}
+window.data.claudeApiKey = ${ESCAPED_KEY};"
+fi
+
+if [[ -f "$CLAUDE_PROMPT_FILE" ]]; then
+    ESCAPED_PROMPT=$(python3 -c "import json,sys; print(json.dumps(sys.stdin.read()))" < "$CLAUDE_PROMPT_FILE")
+    WRAPPED_JSON="${WRAPPED_JSON}
+window.data.aprilFoolsPrompt = ${ESCAPED_PROMPT};"
+fi
+
+# Auto-detect aprilFoolsAI flag and increase delay for API call
+if python3 -c "import json,sys; d=json.load(sys.stdin); exit(0 if d.get('aprilFoolsAI') else 1)" <<< "$JSON_DATA" 2>/dev/null; then
+    if [[ "$JS_DELAY" -lt 10000 ]]; then
+        JS_DELAY=10000
+        echo "AI mode detected — JS delay increased to ${JS_DELAY}ms"
+    fi
+fi
+
 # --- Assemble HTML matching C# line 96 ---
 # head + "</div><script>" + json + "</script>" + addons + "\n" + templates + "<div>" + footer
 

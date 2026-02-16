@@ -56,9 +56,15 @@ fortune:
 print-text:
 	$(RENDER) $(FLAGS) dev/samples/print-text.json
 
+aprilfools:
+	$(RENDER) $(FLAGS) dev/samples/streamelements-tip-aprilfools.json
+
+aprilfools-ai:
+	$(RENDER) $(FLAGS) dev/samples/streamelements-tip-aprilfools-ai.json
+
 # --- Batch targets ---
 
-all: sub resub gift-sub gift-bomb raid cheer follow streamelements-tip streamlabs-tip fortune print-text
+all: sub resub gift-sub gift-bomb raid cheer follow streamelements-tip streamlabs-tip fortune print-text aprilfools aprilfools-ai
 
 setup:
 	sudo ./dev/setup.sh
@@ -67,4 +73,4 @@ clean:
 	rm -f dev/output/*
 	@echo "Cleaned dev/output/"
 
-.PHONY: sub resub gift-sub gift-bomb raid cheer follow streamelements-tip streamlabs-tip fortune print-text all setup clean
+.PHONY: sub resub gift-sub gift-bomb raid cheer follow streamelements-tip streamlabs-tip fortune print-text aprilfools aprilfools-ai all setup clean

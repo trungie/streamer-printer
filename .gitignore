@@ -1,2 +1,5 @@
 # Dev tool output
 dev/output/
+
+# Claude API key (secret)
+dist/teotools/streamerprinter/.claude-api-key

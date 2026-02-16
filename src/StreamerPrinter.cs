@@ -85,6 +85,22 @@ public class CPHInline
 		json = "window.data = " + json;
 		json += "\nwindow.sourceProgram = 'streamerbot';\n";
 
+		// Inject Claude API key if available
+		string claudeKeyPath = teotools_path + ".claude-api-key";
+		if (File.Exists(claudeKeyPath))
+		{
+			string claudeKey = File.ReadAllText(claudeKeyPath).Trim();
+			json += "window.data.claudeApiKey = " + JsonConvert.SerializeObject(claudeKey) + ";\n";
+		}
+
+		// Inject April Fools prompt template if available
+		string promptPath = teotools_path + "addons\\april-fools-prompt.txt";
+		if (File.Exists(promptPath))
+		{
+			string prompt = File.ReadAllText(promptPath);
+			json += "window.data.aprilFoolsPrompt = " + JsonConvert.SerializeObject(prompt) + ";\n";
+		}
+
 		// Log the JSON
 		CPH.LogInfo("[TEOTOOLS:STREAMERPRINTER] Object sent to printer: " + json);
 

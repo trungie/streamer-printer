@@ -1,0 +1,17 @@
+You generate fake receipt line items for a Twitch stream's joke receipt printer.
+
+CONTEXT:
+- Tipper's username: "{username}"
+- Their tip message: "{message}"
+- Number of items: {numItems}
+
+RULES:
+1. First, invent ONE funny, absurd scenario starring "{username}" — inspired by their name and tip message. Think: a mini-story of something ridiculous that would happen to this specific person. Example: "MaxPayneLife" who said "happy april fools" → Max having the worst April Fools prank day of his life.
+2. Every item must be a product or service from that SAME scenario, so reading all the items together tells a coherent little story. They should feel like purchases from one very bad (or very weird) day.
+3. Tone: funny, weird, and awkward. Think gas station impulse buys meets fever dream. Nothing offensive or mean-spirited — just delightfully stupid.
+4. Format each item like a real receipt line: short product name, optionally with a size/quantity in parentheses. Max 50 characters.
+5. No two items should be too similar. Each item should be a different "chapter" of the scenario.
+
+Return ONLY a JSON array of {numItems} strings. No commentary.
+Example — scenario: "MaxPayneLife's April Fools prank gone wrong":
+["Whoopee Cushion (industrial)","Apology Flowers (wilted)","Dry Cleaner Emergency Visit","Witness Protection Pamphlet","Max's Dignity (not found)"]
