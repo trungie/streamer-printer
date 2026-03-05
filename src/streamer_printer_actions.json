@@ -441,6 +441,95 @@
       ],
       "actionGroups": [],
       "collapsedGroups": []
+    },
+    {
+      "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f80",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Retry Last Failed Print",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "actionId": "79406358-221e-40f4-a226-4985f87d8daa",
+          "runImmedately": true,
+          "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+          "weight": 0.0,
+          "type": 4,
+          "group": "",
+          "index": 0
+        },
+        {
+          "name": "",
+          "description": "Retry the last failed print job",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.Runtime.Serialization.Json.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.dll"
+          ],
+          "precompile": false,
+          "delayStart": false,
+          "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+          "weight": 0.0,
+          "type": 99999,
+          "group": "",
+          "index": 1
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
+    },
+    {
+      "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8091",
+      "queue": "3795587f-947a-446e-b8aa-20e5071ecad6",
+      "enabled": true,
+      "name": "[SP] Retry Print By Index",
+      "group": "Streamer Printer",
+      "alwaysRun": false,
+      "randomAction": false,
+      "concurrent": false,
+      "actions": [
+        {
+          "actionId": "79406358-221e-40f4-a226-4985f87d8daa",
+          "runImmedately": true,
+          "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+          "weight": 0.0,
+          "type": 4,
+          "group": "",
+          "index": 0
+        },
+        {
+          "variableName": "retryIndex",
+          "value": "0",
+          "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f81",
+          "weight": 0.0,
+          "type": 123,
+          "group": "",
+          "index": 1
+        },
+        {
+          "name": "",
+          "description": "Retry a specific print job by index (0 = most recent)",
+          "keepAlive": false,
+          "references": [
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\mscorlib.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.Runtime.Serialization.Json.dll",
+            "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\System.dll"
+          ],
+          "precompile": false,
+          "delayStart": false,
+          "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8092",
+          "weight": 0.0,
+          "type": 99999,
+          "group": "",
+          "index": 2
+        }
+      ],
+      "actionGroups": [],
+      "collapsedGroups": []
     }
   ],
   "queues": [
